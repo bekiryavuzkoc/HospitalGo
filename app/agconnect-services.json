@@ -1,0 +1,27 @@
+{
+	"agcgw":{
+		"backurl":"connect-dre.dbankcloud.cn",
+		"url":"connect-dre.hispace.hicloud.com"
+	},
+	"client":{
+		"cp_id":"5190090000025522587",
+		"product_id":"736430079244443052",
+		"client_id":"360050229749220544",
+		"client_secret":"B686E748D76CFA6405F26A19F81C411FDE89C2C70D169D7F55B6BC3311C53093",
+		"app_id":"102195405",
+		"package_name":"hospitalgo.com.huawei",
+		"api_key":"CV7gt6qvCOXKf1zNTND0aPeMEjLbYp2ISdE4k0sPO+BFc8OqhzcAYaVOeWRIqqNW1nxku29BYLNRPNGlk9/XjuXoiImw"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"ml":{
+			"mlservice_url":"ml-api-dre.ai.dbankcloud.com,ml-api-dre.ai.dbankcloud.cn"
+		}
+	},
+	"region":"DE",
+	"configuration_version":"1.0"
+}

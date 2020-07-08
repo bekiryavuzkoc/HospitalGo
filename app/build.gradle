@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.huawei.agconnect'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+
+    defaultConfig {
+        applicationId "hospitalgo.com.huawei"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'Huawei123.'
+            storeFile file('../keystore.jks')
+            storePassword 'Huawei123.'
+        }
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.config
+            }
+            debug {
+                signingConfig signingConfigs.config
+            }
+        }
+
+    }
+
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        implementation 'androidx.appcompat:appcompat:1.1.0'
+        implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+        implementation 'com.huawei.hms:hwid:4.0.1.301'
+        def nav_version = "1.0.0-alpha07"
+        implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.5'
+        implementation "android.arch.navigation:navigation-fragment:$nav_version"
+        implementation "android.arch.navigation:navigation-ui:$nav_version"
+        implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+        implementation 'com.huawei.hms:push:4.0.2.300'
+        implementation 'com.squareup.picasso:picasso:2.71828'
+        implementation 'de.hdodenhof:circleimageview:3.1.0'
+        implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+        implementation "androidx.cardview:cardview:1.0.0"
+        implementation 'com.huawei.hms:ads-lite:13.4.29.303'
+        implementation 'com.huawei.hms:location:5.0.0.300'
+        implementation 'com.huawei.hms:maps:4.0.1.302'
+        implementation 'com.huawei.hms:site:4.0.1.300'
+        implementation 'com.huawei.hms:hianalytics:4.0.3.300'
+        implementation 'com.huawei.agconnect:agconnect-crash:1.2.1.300'
+        implementation 'me.omidh:liquidradiobutton:1.0.01'
+        implementation 'com.github.HITGIF:TextFieldBoxes:1.4.4'
+        implementation 'com.github.GrenderG:Toasty:1.4.2'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:+'
+    implementation 'androidx.constraintlayout:constraintlayout:+'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_mob"
+    app:startDestination="@id/textSearchFragment">
+
+    <fragment
+        android:id="@+id/textSearchFragment"
+        android:name="hospitalgo.com.huawei.GetLocationFragment"
+        android:label="fragment_text_search"
+        tools:layout="@layout/get_location_data" >
+        <action
+            android:id="@+id/action_textSearchFragment_to_mapViewFragment"
+            app:destination="@id/mapViewFragment"
+            app:popUpTo="@id/textSearchFragment" />
+        <action
+            android:id="@+id/action_textSearchFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment"
+            app:popUpTo="@id/textSearchFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mapViewFragment"
+        android:name="hospitalgo.com.huawei.MapViewFragment"
+        android:label="fragment_map_view"
+        tools:layout="@layout/fragment_map_view" >
+        <action
+            android:id="@+id/action_mapViewFragment_to_textSearchFragment2"
+            app:popUpTo="@id/textSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="hospitalgo.com.huawei.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/action_userProfileFragment_to_textSearchFragment2"
+            app:popUpTo="@id/textSearchFragment" />
+    </fragment>
+</navigation>
